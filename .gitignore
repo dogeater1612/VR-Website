@@ -1,0 +1,36 @@
+# =========================
+# Environment / Secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Runtime data
+# =========================
+backend/data/
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.envrc
+
+
+node_modules/
+dist/
+build/
+
+.vscode/
+.vscode-server/
+.idea/
+.DS_Store
+Thumbs.db
+
+
+*.log
+docker-compose.override.yml

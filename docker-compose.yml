@@ -1,0 +1,18 @@
+services:
+  backend:
+    build: ./backend
+    container_name: conversation-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/data:/app/data
+    env_file:
+      - .env
+
+  frontend:
+    build: ./frontend
+    container_name: conversation-frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend 
