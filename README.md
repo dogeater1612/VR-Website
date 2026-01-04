@@ -103,6 +103,62 @@ API_BASE_URL=https://api.example.com
 ```
 
 ---
+Below is a **simple, explicit section** you can **add at the end of your README**.
+It clearly tells people **what file to open and exactly what to change**, without introducing new concepts.
+
+You can paste this **as-is**.
+
+---
+
+## Manual Frontend URL Update (Required)
+
+The frontend HTML files contain **hardcoded backend URLs** by default.
+When deploying this project, **you must update these URLs** to match your own backend domain.
+
+### Files that must be edited
+
+Open the following files:
+
+* `frontend/index.html`
+* `frontend/login.html`
+
+---
+
+### What to change
+
+#### In `frontend/index.html`
+
+Find this line:
+
+```javascript
+https://apivr.xxx.com/conversations/${convoId}/messages
+```
+
+Replace it with your backend API URL, for example:
+
+```javascript
+https://api.example.com/conversations/${convoId}/messages
+```
+
+---
+
+#### In `frontend/login.html`
+
+Find this line:
+
+```javascript
+https://apivr.xxx.com/login
+```
+
+Replace it with your backend API URL, for example:
+
+
+```javascript
+https://api.example.com/login
+```
+
+
+This step is required for every new deployment or fork of the project.
 
 ## Docker Compose
 
@@ -275,3 +331,4 @@ docker compose up --build
 ```
 
 ---
+
